@@ -1,0 +1,19 @@
+{% extends 'layout1.html' %}
+
+
+{% block body %}
+  
+  <div class="container " >
+    <h3 style="padding-top: 40px;padding-left: 40px; margin-left: 35%"> Products in Inventory </h3>
+  
+  	 <div style="width: 450px;margin-top: 50px;margin-left: 30%" ,>
+      <ul class="list-group">
+        
+        {% for row in range(len) %}
+              <li class="list-group-item">{{data[row]}} <span style="float: right"><a href="/edit_product/{{ids[row]}}"><i  class="glyphicon glyphicon-edit"></i></a></span></li>
+        {% endfor %}
+      </ul> 
+     </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Approvals</title>
+  <script  src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">    
+  </script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+  <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+  <style type='text/css'>
+    .row-index {
+      width: 50px;
+      display: inline-block;
+    }
+  </style>
+
+  <script type='text/javascript'>
+
+  
+    
+  </script>
+</head>
+<body>
+    <div class="container" >
+  
+        <div id="toolbar" style="position: relative;margin-top: 20px; margin-bottom: 30px">
+            <button id="button" class="btn btn-default">Approve</button>
+        </div>
+        <table id="table">
+            <thead>
+            <tr>
+                <th data-field="state" data-checkbox="true"></th>
+                <th data-field="productId">ID</th>
+                <th data-field="productName">Product Name</th>
+                <th data-field="vendor">Vendor</th>
+                <th data-field="quantity">Quantity</th>
+                <th data-field="status"> Status</th>
+            </tr>
+            </thead>
+        </table>
+        <i id ="loading" class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+      
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+</body>

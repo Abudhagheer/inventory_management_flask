@@ -1,0 +1,46 @@
+{% extends 'layout1.html' %}
+
+
+{% block body %}
+  <div class="row">
+    <div style="position:relative; ">
+      <img src="https://media.glassdoor.com/sql/1623199/pinkblue-in-squarelogo-1508733400931.png" style="width: 100px;margin: auto;"/>  
+    </div>
+  </div>
+  <div style="position: relative;width: 100%;margin-left: 800px;font-size: 17px;margin-top:-55px;font-family: unset;font-weight: lighter;"> Welcome {{g.username}} </div>
+
+    <hr/>
+
+    <div class="panel panel-default" style="width: 40%;margin-left: 30%; margin-top: 10%">
+      <div class="panel-heading">
+        <h3 class="panel-title">Dashboard</h3>
+      </div>
+      <div class="panel-body">
+
+          <ul class="list-group" style="list-style-type: none ; margin-top: 20px">
+            
+            <li style="margin-top: 20px">
+              <a class="list-group-item" href="/add_product"> Add Product</a> 
+            </li>
+
+            <li style="margin-top: 20px">
+              <a class="list-group-item" href="/edit_product"> Modify Product</a>              
+            </li>
+
+          </ul>
+
+            
+          
+         
+            
+          
+         
+          
+        </div>
+        
+      </div>
+    </div>
+
+ 
+ 
+{% endblock %}

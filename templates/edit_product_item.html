@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+
+<!-- 'productId', 'productName', 'vendor', 'MRP', 'batchNum', 'batchDate', 'quantity', 'status'-->
+
+
+<div >
+  
+  {% block body %}
+  <h1>Edit Product</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    
+    <div class="form-group">
+      {{ render_field(form.productName, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.vendor, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.MRP, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.batchNum, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.batchDate, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.quantity, class_="form-control") }}
+    </div>
+    <p><input class="btn btn-primary" type="submit" value="Submit">
+  </form>
+
+{% endblock %}
+
+</div>
+
+
