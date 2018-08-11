@@ -102,6 +102,11 @@ def login():
 		pwd = request.form["pwd"]
 		email = request.form["email"]
 		user = User.query.filter_by(email=email.strip()).first()
+
+		if user is None :
+			errors =  "invalid email / password"
+			return render_template("login.html" , error = errors)
+
 		if user is not None and user.password == pwd:
 			session["username"]  = user.username
 			session["role"] = user.role
@@ -109,6 +114,15 @@ def login():
 			if role == True :
 				return redirect(url_for('approval'))
 			else : return redirect(url_for("dashboard"))
+
+
+
+		elif user is not None and user.password != pwd:
+
+			print "called "
+			errors = "incorrect password"
+			return render_template("login.html", error = errors)
+
 	return render_template("login.html")
 
 
